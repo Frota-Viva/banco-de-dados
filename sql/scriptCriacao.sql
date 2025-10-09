@@ -1,8 +1,19 @@
+drop table Empresa;
+drop table Motorista;
+drop table Telefone_Empresa;
+drop table Telefone_Motorista;
+drop table Frota;
+drop table Entrega;
+drop table Caminhao;
+drop table Manutencao;
+drop table Informacoes;
+drop table Caminhao_Motorista;
+
 create table Empresa(
 	id serial  primary key, 
 	tipo_empresa varchar(500) not null,
 	cnpj char(14) not null constraint cnpj_unique unique,
-	email varchar(200) not null,
+	email varchar(200) not null unique,
 	senha varchar(25) not null,
 	nome varchar (300) not null,
 	cep char(8) not null,
@@ -17,7 +28,7 @@ create table Empresa(
 create table Motorista(
 	id serial primary key,
 	nome varchar(50) not null,
-	email varchar(200) not null,
+	email varchar(200) not null unique,
 	cpf char(11) not null
 		constraint cpf_unique unique,
 	senha varchar(25) not null,
