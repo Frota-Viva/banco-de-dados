@@ -56,56 +56,56 @@ INSERT INTO Entrega(cod_entrega, descricao_produto, dt_pedido, dt_entrega, cep, 
 (6, 'Alias in eligendi omnis quibusdam.', '2025-01-08', '2025-02-12', '06474575', 'Quadra Igor Mendes', 'Corporis corporis voluptatum.', 96046, 'Brasil', 'SP', 'Freitas Grande', 1 ),
 (7, 'Ratione veniam impedit vel enim.', '2025-06-13', '2025-08-05', '57376611', 'Favela Cassiano', 'Quas aut.', 61515, 'Brasil', 'SP', 'Mendes', 1 ),
 (8, 'Id quam.', '2025-01-02', '2025-02-05', '90838650', 'Colônia de Sousa', 'Perspiciatis rerum qui.', 40440, 'Brasil', 'SP', 'Rodrigues Paulista', 10 ),
-(9, 'Laboriosam recusandae similique.', '2025-03-25', '2025-08-03', '61748761', 'Recanto de Caldeira', 'Harum temporibus.', 77750, 'Brasil', 'SP', 'Cavalcante', 10 ),
-(10, 'Ducimus quia vel modi sit.', '2025-09-04', '2025-09-30', '95710540', 'Vereda de Macedo', 'Quis sapiente.', 51590, 'Brasil', 'SP', 'Moraes', 3 );
+(9, 'Laboriosam recusandae similique.', '2025-03-25', '2025-04-27', '17487619', 'Colônia Kaique Gomes', 'Temporibus dicta maxime impedit.', 77750, 'Brasil', 'SP', 'Monteiro da Prata', 10 ),
+(10, 'Ratione numquam similique.', '2025-02-09', '2025-02-12', '40874138', 'Ladeira Thales Jesus', 'Consectetur deserunt.', 51590, 'Brasil', 'SP', 'Nascimento', 3 );
 
 INSERT INTO Telefone_Empresa(id, telefone_empresa, id_empresa) VALUES
-(1, '44936224368' ,1),
-(2, '90989826447' ,2),
-(3, '44973759735' ,3),
-(4, '29929782085' ,4),
-(5, '82935977512' ,5),
-(6, '24931809213' ,6),
-(7, '93989465004' ,7),
-(8, '93913454986' ,8),
-(9, '01955214290' ,9),
-(10, '51911453480' ,10);
+(1, '98926447447' ,1),
+(2, '37959735292' ,2),
+(3, '97982085823' ,3),
+(4, '59977512243' ,4),
+(5, '18909213938' ,5),
+(6, '94965004931' ,6),
+(7, '34954986015' ,7),
+(8, '52914290511' ,8),
+(9, '14953480501' ,9),
+(10, '26953154085' ,10);
 
 INSERT INTO Telefone_Motorista(id, telefone_motorista, id_motorista) VALUES
-(1, '50912653154' ,1),
-(2, '08951529461' ,2),
-(3, '99987968643' ,3),
-(4, '48920981233' ,4),
-(5, '64980484847' ,5),
-(6, '26915185888' ,6),
-(7, '90994722192' ,7),
-(8, '37955422676' ,8),
-(9, '19924490802' ,9),
-(10, '68917069645' ,10);
+(1, '15929461998' ,1),
+(2, '79968643482' ,2),
+(3, '09981233648' ,3),
+(4, '04984847261' ,4),
+(5, '51985888909' ,5),
+(6, '47922192375' ,6),
+(7, '54922676192' ,7),
+(8, '44990802681' ,8),
+(9, '70969645669' ,9),
+(10, '70917000192' ,10);
 
 INSERT INTO Informacoes(id, temp_ar_admissao, posicao_acelerador, tempo_motor_ligado, carga_motor, rpm_motor, dt_hora_leitura, pressao_pneu, sensores_oxigenio, qtd_combustivel, temp_arrefecimento, pressao_coletor_admissao, id_caminhao) VALUES
-(1, 20, 64, '17:19:22', 29, 650, '1997-10-17 12:14:59', 34.16, 0, 103, 102, 1.38, 10),
-(2, 26, 58, '07:08:59', 34, 2844, '2001-06-09 03:21:18', 32.87, 0, 98, 102, 2.18, 9),
-(3, 39, 71, '22:27:37', 26, 2345, '2002-01-13 14:57:50', 35.6, 1, 93, 106, 1.74, 9),
-(4, 28, 62, '02:14:47', 45, 2297, '2013-12-19 07:36:58', 30.77, 1, 117, 108, 0.85, 4),
-(5, 35, 22, '13:05:14', 70, 2993, '1970-01-15 00:49:23', 29.45, 0, 141, 86, 0.86, 2),
-(6, 17, 2, '03:40:13', 57, 659, '1977-07-25 16:34:17', 34.03, 1, 63, 87, 0.99, 10),
-(7, 20, 44, '12:16:23', 37, 884, '2006-02-05 08:32:56', 29.34, 1, 135, 80, 1.92, 5),
-(8, 29, 89, '08:07:00', 41, 2633, '1994-03-31 21:42:40', 31.79, 0, 79, 94, 1.38, 4),
-(9, 23, 13, '16:36:02', 32, 2689, '2023-04-12 06:48:22', 35.81, 1, 5, 84, 0.83, 3),
-(10, 16, 92, '04:40:35', 20, 2425, '1994-04-03 23:30:47', 33.64, 1, 139, 84, 2.46, 9);
+(1, 20, 64, '12:16:23', 29, 650, '2006-02-05 08:32:56', 34.16, 0, 103, 102, 1.38, 10),
+(2, 26, 58, '08:07:00', 34, 2844, '1994-03-31 21:42:40', 32.87, 0, 98, 102, 2.18, 9),
+(3, 39, 71, '16:36:02', 26, 2345, '2023-04-12 06:48:22', 35.6, 1, 93, 106, 1.74, 9),
+(4, 28, 62, '04:40:35', 45, 2297, '1994-04-03 23:30:47', 30.77, 1, 117, 108, 0.85, 4),
+(5, 35, 22, '01:24:49', 70, 2993, '2017-06-18 19:39:11', 29.45, 0, 141, 86, 0.86, 2),
+(6, 17, 2, '05:19:02', 57, 659, '2012-04-24 13:12:26', 34.03, 1, 63, 87, 0.99, 10),
+(7, 20, 44, '11:53:59', 37, 884, '2008-04-08 02:30:16', 29.34, 1, 135, 80, 1.92, 5),
+(8, 29, 89, '14:01:53', 41, 2633, '1977-12-03 19:43:15', 31.79, 0, 79, 94, 1.38, 4),
+(9, 23, 13, '16:11:11', 32, 2689, '2017-11-29 00:28:32', 35.81, 1, 5, 84, 0.83, 3),
+(10, 16, 92, '13:09:29', 20, 2425, '2019-06-29 05:48:23', 33.64, 1, 139, 84, 2.46, 9);
 
 INSERT INTO Manutencao(id, dt_cadastro, dt_conclusao, tipo_manutencao, custo, ultimo_motorista, descricao_servico, id_caminhao) VALUES 
-(1, '2025-07-01', '2025-09-06', 'Corretiva', 29646, 4, 'Dolores natus facere culpa quod totam et sunt.', 9),
-(2, '2024-07-08', '2025-02-21', 'Preventiva', 42600, 1, 'Fugit rerum cupiditate quaerat aut.', 7),
-(3, '2025-02-20', '2025-05-06', 'Preventiva', 44330, 10, 'Id blanditiis laborum eaque commodi accusamus.', 6),
-(4, '2025-06-14', '2025-08-09', 'Corretiva', 43342, 7, 'Voluptas repudiandae veniam accusantium.', 1),
-(5, '2024-11-29', '2025-03-05', 'Preventiva', 48429, 5, 'Optio exercitationem dolores quod.', 3),
-(6, '2025-04-18', '2025-05-24', 'Corretiva', 14002, 1, 'Id iure necessitatibus aliquid at.', 5),
-(7, '2023-10-13', '2023-10-29', 'Preventiva', 4735, 2, 'Eius impedit nisi voluptates provident et modi.', 5),
-(8, '2024-05-07', '2025-02-10', 'Corretiva', 19621, 3, 'Necessitatibus sapiente quos numquam quasi.', 7),
-(9, '2024-01-13', '2024-07-27', 'Corretiva', 37123, 5, 'Architecto neque nulla molestiae quaerat.', 3),
-(10, '2023-12-02', '2024-03-29', 'Corretiva', 655, 9, 'Quia fugit placeat.', 1);
+(1, '2025-03-03', '2025-03-24', 'Preventiva', 29646, 4, 'Fugiat eos repellendus ipsam praesentium odio.', 9),
+(2, '2025-05-20', '2025-10-04', 'Corretiva', 42600, 1, 'Omnis quos itaque iusto laudantium quo.', 7),
+(3, '2024-01-15', '2024-05-10', 'Corretiva', 44330, 10, 'Impedit reiciendis officiis velit itaque fugiat.', 6),
+(4, '2024-08-12', '2025-02-05', 'Preventiva', 43342, 7, 'Molestias dolorum in.', 1),
+(5, '2025-10-05', '2025-10-08', 'Corretiva', 48429, 5, 'Fugiat accusantium dolor doloremque.', 3),
+(6, '2025-03-29', '2025-04-27', 'Corretiva', 14002, 1, 'Quod blanditiis officia harum nam odit.', 5),
+(7, '2024-02-16', '2025-05-23', 'Corretiva', 4735, 2, 'Provident et modi ipsum magnam in cumque.', 5),
+(8, '2024-05-13', '2024-09-26', 'Corretiva', 19621, 3, 'Veritatis vero dolorem architecto.', 7),
+(9, '2025-02-06', '2025-03-07', 'Corretiva', 37123, 5, 'Adipisci illo impedit consequuntur.', 3),
+(10, '2024-07-13', '2024-11-28', 'Corretiva', 655, 9, 'Quae expedita modi at repudiandae.', 1);
 
 INSERT INTO Caminhao_Motorista(id, id_caminhao, id_motorista) VALUES 
 (1, 10, 4 ),
