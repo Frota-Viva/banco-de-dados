@@ -1,13 +1,13 @@
-drop table Empresa;
-drop table Motorista;
-drop table Telefone_Empresa;
-drop table Telefone_Motorista;
-drop table Frota;
-drop table Entrega;
-drop table Caminhao;
-drop table Manutencao;
-drop table Informacoes;
-drop table Caminhao_Motorista;
+drop table Empresa CASCADE;
+drop table Motorista CASCADE;
+drop table Frota CASCADE;
+drop table Caminhao CASCADE;
+drop table Entrega CASCADE;
+drop table Telefone_Empresa CASCADE;
+drop table Telefone_Motorista CASCADE;
+drop table Informacoes CASCADE;
+drop table Manutencao CASCADE;
+drop table Caminhao_Motorista CASCADE;
 
 create table Empresa(
 	id serial  primary key, 
