@@ -1,3 +1,5 @@
+drop view informacoesHome;
+
 create view informacoesHome as
 select
 	e.nome,
@@ -14,10 +16,10 @@ where
 	m.status = 'M') "manutencao",
 	count(distinct et.dt_entrega) filter (
 where
-	et.dt_entrega<current_date ) "atrasadas",
+	et.dt_entrega is not null ) "entregue",
 	count(distinct et.dt_entrega) filter (
 where
-	et.dt_entrega >= current_date ) "pendente",
+	et.dt_entrega is null ) "a_caminho",
 	count(distinct et.cod_entrega) "qt_entrega"
 from
 	empresa e
