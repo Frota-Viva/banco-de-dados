@@ -118,7 +118,7 @@ create table Informacoes(
 );
 
 create table Caminhao_Motorista(
-	id int primary key,
+	id serial primary key,
 	id_caminhao int,
 	id_motorista int,
 		constraint fk_id_motorista_caminhao_motorista foreign key(id_motorista) references Motorista(id),
