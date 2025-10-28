@@ -36,3 +36,20 @@ group by
 	e.nome,
 	e.id,
 	f.tamanho_frota;
+
+
+CREATE VIEW perfismotoristas AS
+SELECT 
+    c.placa, 
+    m.nome, 
+    m.email, 
+    MIN(tm.telefone_motorista) AS telefone_principal, 
+    f.tipo_frota,
+    e.id AS id_empresa
+FROM motorista m
+JOIN caminhao_motorista cm ON cm.id_motorista = m.id
+JOIN caminhao c ON cm.id_caminhao = c.id
+JOIN telefone_motorista tm ON tm.id_motorista = m.id
+JOIN empresa e ON e.id = m.id_empresa
+JOIN frota f ON f.id_empresa = e.id
+GROUP BY c.placa, m.nome, m.email, f.tipo_frota, e.id;
