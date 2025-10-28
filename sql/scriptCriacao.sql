@@ -14,7 +14,7 @@ create table Empresa(
 	tipo_empresa varchar(500) not null,
 	cnpj char(14) not null constraint cnpj_unique unique,
 	email varchar(200) not null unique,
-	senha varchar(25) not null,
+	senha varchar(100) not null,
 	nome varchar (300) not null,
 	cep char(8) not null,
 	rua varchar(200) not null,
@@ -31,7 +31,7 @@ create table Motorista(
 	email varchar(200) not null unique,
 	cpf char(11) not null
 		constraint cpf_unique unique,
-	senha varchar(25) not null,
+	senha varchar(100) not null,
 	id_empresa int not null,
 		constraint fk_id_empresa foreign key(id_empresa) references Empresa(id)
 );
@@ -79,7 +79,7 @@ create table Entrega(
 create table Caminhao(
 	id serial primary key,
 	placa char(7) not null,
-	status varchar(20) not null,
+	status char(1) not null check (status = 'A' or status = 'I' or status = 'M'),
 	kms_rodados decimal not null,
 	modelo varchar(30) not null,
 	capacidade int not null,
@@ -91,7 +91,7 @@ create table Manutencao(
 	id serial primary key,
 	dt_cadastro date not null,
 	dt_conclusao date,
-	tipo_manutencao varchar(30) not null,
+	tipo_manutencao varchar(30) not null check (tipo_manutencao = 'Corretiva' or tipo_manutencao = 'Preventiva'),
 	custo decimal not null,
 	ultimo_motorista int not null,
 		constraint fk_motorista foreign key(ultimo_motorista) references Motorista(id),
