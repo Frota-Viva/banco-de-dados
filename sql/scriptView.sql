@@ -50,6 +50,6 @@ FROM motorista m
 JOIN caminhao_motorista cm ON cm.id_motorista = m.id
 JOIN caminhao c ON cm.id_caminhao = c.id
 JOIN telefone_motorista tm ON tm.id_motorista = m.id
-JOIN empresa e ON e.id = m.id_empresa
-JOIN frota f ON f.id_empresa = e.id
+JOIN frota f ON c.id_frota = f.id 
+JOIN empresa e ON e.id = m.id_empresa and f.id_empresa = e.id 
 GROUP BY c.placa, m.nome, m.email, f.tipo_frota, e.id;
