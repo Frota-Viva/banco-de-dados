@@ -27,8 +27,12 @@ try:
     with open("sql/scriptDataload.sql", "r", encoding="utf-8") as o:
         dataload = o.read()
     
+    with open("sql/scriptDataload.sql", "r", encoding="utf-8") as o:
+        view = o.read()
+    
     cur.execute(criacao)
     cur.execute(dataload)
+    cur.execute(view)
     
     con.commit()
     
