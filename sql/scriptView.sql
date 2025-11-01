@@ -49,9 +49,7 @@ left join manutencao mn on
 group by
 	f.id_empresa,
 	e.nome,
-	e.id,
-	f.tamanho_frota;
-
+	e.id;
 
 CREATE VIEW perfismotoristas AS
 SELECT 
