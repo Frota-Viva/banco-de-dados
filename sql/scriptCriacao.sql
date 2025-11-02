@@ -29,25 +29,25 @@ create table Motorista(
 	id serial primary key,
 	nome varchar(50) not null,
 	email varchar(200) not null unique,
-	cpf char(11) not null
+	cpf char(11) not null 
 		constraint cpf_unique unique,
 	senha varchar(100) not null,
 	id_empresa int not null,
-		constraint fk_id_empresa foreign key(id_empresa) references Empresa(id)
+		constraint fk_id_empresa foreign key(id_empresa) references Empresa(id) on delete cascade
 );
 
 create table Telefone_Empresa(
 	id serial primary key,
 	telefone_empresa char(11) not null,
 	id_empresa int not null,
-		constraint fk_id_empresa foreign key(id_empresa) references Empresa(id)
+		constraint fk_id_empresa foreign key(id_empresa) references Empresa(id) on delete cascade
 );
 
 create table Telefone_Motorista(
 	id serial primary key,
 	telefone_motorista char(11) not null,
 	id_motorista int not null,
-		constraint fk_id_motorista foreign key(id_motorista) references Motorista(id)
+		constraint fk_id_motorista foreign key(id_motorista) references Motorista(id) on delete cascade
 );
 
 create table Frota(
@@ -56,7 +56,7 @@ create table Frota(
 	tipo_frota varchar(50) not null,
 	regiao varchar(50) not null,
 	id_empresa int not null,
-		constraint fk_id_empresa foreign key(id_empresa) references Empresa(id)
+		constraint fk_id_empresa foreign key(id_empresa) references Empresa(id) on delete cascade
 );
 
 create table Entrega(
@@ -73,7 +73,7 @@ create table Entrega(
 	estado varchar(50) not null,
 	cidade varchar(50) not null,
 	id_motorista int not null,
-		constraint fk_id_motorista foreign key(id_motorista) references Motorista(id)
+		constraint fk_id_motorista foreign key(id_motorista) references Motorista(id) on delete cascade
 );
 
 create table Caminhao(
@@ -84,7 +84,7 @@ create table Caminhao(
 	modelo varchar(30) not null,
 	capacidade int not null,
 	id_frota int not null,
-		constraint fk_id_frota foreign key(id_frota) references Frota(id)
+		constraint fk_id_frota foreign key(id_frota) references Frota(id) on delete cascade
 );
 
 create table Manutencao(
@@ -94,10 +94,10 @@ create table Manutencao(
 	tipo_manutencao varchar(30) not null check (tipo_manutencao = 'Corretiva' or tipo_manutencao = 'Preventiva'),
 	custo decimal not null,
 	ultimo_motorista int not null,
-		constraint fk_motorista foreign key(ultimo_motorista) references Motorista(id),
+		constraint fk_motorista foreign key(ultimo_motorista) references Motorista(id) on delete cascade,
 	descricao_servico varchar(500) not null,
 	id_caminhao int not null,
-		constraint fk_id_caminhao foreign key(id_caminhao) references Caminhao(id)
+		constraint fk_id_caminhao foreign key(id_caminhao) references Caminhao(id) on delete cascade
 );
 
 create table Informacoes(
@@ -114,13 +114,13 @@ create table Informacoes(
 	temp_arrefecimento decimal not null, 
 	pressao_coletor_admissao decimal not null,
 	id_caminhao int not null,
-		constraint fk_id_caminhao foreign key(id_caminhao) references Caminhao(id)
+		constraint fk_id_caminhao foreign key(id_caminhao) references Caminhao(id) on delete cascade
 );
 
 create table Caminhao_Motorista(
 	id serial primary key,
 	id_caminhao int,
 	id_motorista int,
-		constraint fk_id_motorista_caminhao_motorista foreign key(id_motorista) references Motorista(id),
-		constraint fk_id_caminhao_caminhao_motorista foreign key(id_caminhao) references Caminhao(id)
+		constraint fk_id_motorista_caminhao_motorista foreign key(id_motorista) references Motorista(id) on delete cascade,
+		constraint fk_id_caminhao_caminhao_motorista foreign key(id_caminhao) references Caminhao(id) on delete cascade
 )
